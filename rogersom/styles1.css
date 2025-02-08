@@ -1,0 +1,224 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+
+/* Header */
+header {
+    display: flex;
+    flex-wrap: wrap; /* Permite quebrar linha em telas menores */
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background-color: #feca0b;
+    padding: 10px 20px;
+    color: #000;
+}
+
+header .logo img {
+    max-width: 100%;
+    height: auto; /* Mantém proporção */
+}
+
+header nav {
+    display: flex;
+    flex-wrap: wrap; /* Ajusta links em telas menores */
+    gap: 20px;
+}
+
+header nav a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+header nav a:hover {
+    text-decoration: none;
+}
+
+/* Banner */
+.banner {
+    text-align: center;
+}
+
+.banner img {
+    width: 100%; /* O banner ocupa a largura total */
+    max-width: 1000px;
+    margin: 20px auto;
+    border-radius: 10px;
+}
+
+/* Container Geral */
+.container {
+    max-width: 1200px;
+    width: 90%;
+    background: #fff;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#sobre h2 {
+    text-align: center;
+    color: #000;
+    margin-bottom: 20px;
+}
+
+#sobre .logo2 img {
+    display: block;
+    margin: 20px auto;
+    max-width: 100%; /* Garante responsividade */
+    height: auto; /* Mantém proporção */
+    border: 3px solid #000;
+}
+
+#sobre ul {
+    list-style: disc;
+    margin: 20px auto;
+    padding-left: 20px;
+}
+
+#sobre img {
+    max-width: 100%; /* Responsivo */
+    height: auto;
+    margin: 20px auto;
+    border-radius: 10px;
+    display: block;
+}
+
+/* Footer */
+footer {
+    width: 100%;
+    background-color: #feca0b;
+    color: #000;
+    text-align: center;
+    padding: 15px 0;
+}
+
+/* Botão de scroll para o topo */
+#scrollTopBtn {
+    display: none; /* Inicialmente invisível */
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 100;
+    background-color: #feca0b;
+    color: #000;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 50%; /* Redondo */
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    font-size: 24px; /* Ajuste o tamanho da seta */
+    text-align: center;
+}
+
+/* Animação ao passar o mouse */
+#scrollTopBtn:hover {
+    background-color: #dca005;
+    transform: scale(1.1);
+}
+
+/* Estilização do botão "Carregar Mais Sobre Nós" */
+.styled-button {
+    display: block; /* Para centralizar */
+    margin: 20px auto; /* Margem automática para centralização horizontal */
+    padding: 10px 20px;
+    background-color: #feca0b; /* Cor amarela combinando com o header e footer */
+    color: #000; /* Texto preto para contraste */
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px; /* Arredondamento dos cantos */
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, background-color 0.3s;
+}
+
+/* Efeito de hover no botão */
+.styled-button:hover {
+    background-color: #dca005; /* Tom mais escuro de amarelo no hover */
+    transform: scale(1.05); /* Leve aumento no hover */
+}
+
+/* Responsividade para o botão em telas menores */
+@media (max-width: 480px) {
+    .styled-button {
+        font-size: 14px; /* Texto menor em dispositivos pequenos */
+        padding: 8px 15px; /* Ajusta o tamanho do botão */
+    }
+}
+
+
+
+
+/* Responsividade */
+@media (max-width: 768px) {
+    #scrollTopBtn {
+        bottom: 15px;
+        right: 15px;
+        padding: 8px 12px;
+        font-size: 20px; /* Reduz o tamanho em dispositivos menores */
+    }
+}
+
+@media (max-width: 1024px) {
+
+    header nav {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+
+    header nav a {
+        font-size: 14px;
+    }
+
+    .banner img {
+        width: 90%; /* Reduz tamanho do banner */
+    }
+
+    .container {
+        width: 95%; /* Reduz margens laterais */
+    }
+
+}
+
+@media (max-width: 480px) {
+    header nav {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+
+    header nav a {
+        font-size: 14px;
+    }
+
+    header .logo img {
+        max-width: 80px; /* Reduz o tamanho da logo */
+    }
+
+    .banner img {
+        width: 100%; /* O banner ocupa toda a largura */
+    }
+
+    #scrollTopBtn {
+        padding: 8px 10px; /* Reduz tamanho do botão */
+    }
+
+    footer {
+        font-size: 14px; /* Ajusta fonte no footer */
+    }
+}

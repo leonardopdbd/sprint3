@@ -1,0 +1,189 @@
+/* Reset de margem e padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo e fonte */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #000;
+}
+
+/* Estilo do header */
+header {
+    display: flex;
+    flex-wrap: wrap; /* Permite que o conteúdo se ajuste em telas menores */
+    align-items: center;
+    justify-content: space-between; /* Alinha logo e links à esquerda */
+    width: 100%;
+    background-color: #feca0b;
+    padding: 10px 30px; /* Espaço interno para afastar o conteúdo das bordas */
+    color: #000;
+}
+
+header .logo {
+    margin-right: 20px; /* Afastamento entre a logo e os links */
+}
+
+header .logo img {
+    max-width: 100px;
+    display: block;
+}
+
+header nav {
+    display: flex;
+    gap: 20px; /* Espaçamento entre os links */
+}
+
+header nav a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+header nav a:hover {
+    text-decoration: none;
+}
+
+.banner {
+    text-align: center; /* Centraliza o banner */
+}
+
+/* Banner */
+.banner img {
+    width: 100%; /* O banner ocupa a largura total */
+    max-width: 1000px; /* Limita a largura máxima */
+    margin: 20px auto;
+    border-radius: 10px;
+}
+
+/* Estilo da seção Nossos serviços */
+#produtos {
+    text-align: center;
+    margin: 40px auto;
+    max-width: 1200px;
+    width: 90%; /* Adiciona margem para telas menores */
+}
+
+#produtos h2 {
+    font-size: 36px;
+    color: #000;
+    margin-bottom: 20px;
+}
+
+#produtos p {
+    font-size: 18px;
+    color: #000;
+    margin-bottom: 40px;
+}
+
+/* Container para as colunas de produtos */
+#produtos .product-wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px; /* Espaçamento entre as colunas */
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+/* Cada produto (imagem + título) */
+#produtos .product {
+    position: relative;
+    flex: 1 1 48%; /* Permite que cada coluna ocupe cerca de 50% da largura */
+    text-align: center;
+    margin-bottom: 30px; /* Adiciona margem entre as colunas em telas pequenas */
+}
+
+/* Título sobre as imagens */
+#produtos .product h3 {
+    background-color: #feca0b;
+    color: #000;
+    padding: 15px;
+    font-size: 22px;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-bottom: 10px; /* Espaço entre o título e a imagem */
+}
+
+/* Imagens maiores */
+#produtos .product img {
+    width: 100%;
+    height: auto;
+    max-height: 400px; /* Aumenta o tamanho das imagens */
+    border-radius: 8px;
+    object-fit: cover; /* Garante que a imagem cubra o espaço sem distorção */
+}
+
+/* Responsividade para dispositivos móveis */
+@media (max-width: 768px) {
+    #produtos .product-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #produtos .product {
+        max-width: 100%;  /* Imagens ocupando 100% da largura em dispositivos móveis */
+        margin-bottom: 30px;
+    }
+
+    #produtos h2 {
+        font-size: 28px;
+    }
+
+    #produtos p {
+        font-size: 16px;
+    }
+
+    header nav {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+
+    header nav a {
+        font-size: 14px;
+    }
+
+    .banner img {
+        width: 100%;
+    }
+}
+
+/* Botão de scroll para o topo */
+#scrollTopBtn {
+    display: none; /* Inicialmente invisível */
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 100;
+    background-color: #feca0b;
+    color: #000;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 50%; /* Redondo */
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    font-size: 24px; /* Ajuste o tamanho da seta */
+    text-align: center;
+}
+
+/* Animação ao passar o mouse */
+#scrollTopBtn:hover {
+    background-color: #dca005;
+    transform: scale(1.1);
+}
+
+/* Estilo do footer */
+footer {
+    text-align: center;
+    background-color: #feca0b;
+    color: #000;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}

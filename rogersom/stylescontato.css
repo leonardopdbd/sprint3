@@ -1,0 +1,218 @@
+/* Reset de margem e padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo e fonte */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Garante que o body ocupe toda a altura */
+}
+
+.wrapper {
+    flex: 1; /* Garante que o conteúdo principal ocupe o espaço restante */
+}
+
+/* Estilo do cabeçalho */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background-color: #feca0b;
+    padding: 10px 30px;
+    color: #000;
+    flex-wrap: wrap;
+}
+
+header .logo {
+    margin-right: 20px;
+}
+
+header .logo img {
+    max-width: 100px;
+    display: block;
+}
+
+header nav {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+header nav a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+
+/* Seção de contato */
+#contato {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#contato h2 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+/* Estilo do formulário */
+#contato form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#contato form label {
+    font-size: 16px;
+    color: #7f8c8d;
+}
+
+#contato form input,
+#contato form textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+#contato form input:focus,
+#contato form textarea:focus {
+    border-color: #feca0b;
+}
+
+#contato form button {
+    background-color: #feca0b;
+    color: #000;
+    font-size: 16px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#contato form button:hover {
+    background-color: #e5b209;
+}
+
+/* Informações de contato */
+#contato p {
+    text-align: center;
+    font-size: 14px;
+    color: #2c3e50;
+    margin-top: 10px;
+}
+
+/* Ícones de contato */
+#contato .contato-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+#contato .contato-icons a {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+}
+
+#contato .contato-icons img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s;
+}
+
+#contato .contato-icons img:hover {
+    transform: scale(1.1);
+}
+
+/* Footer */
+footer {
+    width: 100%;
+    background-color: #feca0b;
+    color: #000;
+    text-align: center;
+    padding: 15px 0;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    header nav {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+
+    header nav a {
+        font-size: 14px;
+    }
+
+    
+
+    #contato {
+        margin: 20px;
+        padding: 15px;
+    }
+
+    #contato h2 {
+        font-size: 24px;
+    }
+
+    #contato form input,
+    #contato form textarea {
+        font-size: 12px;
+    }
+
+    #contato form button {
+        font-size: 14px;
+    }
+
+    #contato .contato-icons a {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    header nav a {
+        font-size: 12px;
+    }
+
+    #contato h2 {
+        font-size: 20px;
+    }
+
+    #contato form input,
+    #contato form textarea {
+        padding: 8px;
+    }
+
+    #contato form button {
+        padding: 8px;
+    }
+
+    #contato .contato-icons a {
+        width: 30px;
+        height: 30px;
+    }
+}
